@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="money.ico" type="image/x-icon" />
+<title>D &amp; M Financial Advising - Your Complete Financial Center</title>
+<link href="styles2.css" rel="stylesheet" type="text/css">
+<script src = "employee.js"></script>
+<script>
+
+</script>
+<meta name="keywords" content="calculator, money, finances, advisor, financial">
+<meta name="description" content="D &amp; M Financial Advising is a premier financial advising company for both business and personal finances.">
+</head>
+
+<body>
+<div class="gridContainer clearfix">
+	<div id="content" class="fluid">
+		<header class="fluid header_div"></header>
+	        <nav class="menu_bar">
+	          <ul>
+	            <li><a href = "javascript:showHome()">Home</a></li>
+				<li><a href = "javascript:showAboutUs()">About Us</a></li>
+				<li class="dropdown">
+					<a href = "#" class="dropbtn">Employees</a>
+					<div class="dropdown-content">
+						<a href = "javascript:showEmployeeAll()">Show All</a>
+						<a href = "javascript:showEmployeeAdd()">Add Employee</a>
+						<a href = "javascript:showEmployeeSearch()">Search</a>
+					</div>
+				</li>
+	            <li class="dropdown">
+					<a href = "#" class="dropbtn">Profit</a>
+					<div class="dropdown-content">
+						<a href = "javascript:showRevenueTool()">Calculator</a>
+						<a href = "javascript:showRevenueGraph()">Graph</a>
+					</div>
+				</li>
+              </ul>
+	        </nav>
+			
+			<div id = "home" class="fluid intro_paragraph">
+				<p class="body_text">Welcome to D &amp; M Financial Advising. We offer a variety of financial planning and advising plans to suit your needs. Our plans  are full of excellent ways to help you learn how to make your money work for you. Our advisors are just waiting to help you attain your financial goals. We are committed to helping our clients achieve their financial goals and live their ideal calendars. Our approach is client-centered, not product-centered. You will find in us a trustful partner to help you achieve your financial goals.</p>
+				<p class="body_text">Our planners and staff hold various degrees and specialty licenses such as Certified Public Accountant (CPA), Certified Financial Planner ™ practitioner (CFP®), Personal Financial Specialist (PFS) or Masters Degrees. The firm is a registered investment advisor with the State of California.</p>
+			</div>
+			<div id = "aboutUs" class="fluid intro_paragraph">
+				<h2>Approach and Strategy</h2>
+				<p class="body_text">We are committed to helping our clients achieve their financial goals and live their ideal calendars. Our approach is client-centered, not product-centered.You will find in us a trustful partner to help you achieve your financial goals.</p>
+				<div style = "padding-left:2em">
+
+					&#187; Create and maintain a realistic income management strategy.<br>
+					&#187; Build a Financial Independence.<br>
+					&#187; Plan to provide direction and structure to your financial future.<br>
+					&#187; Our experienced advisors deliver expert, objective guidance and solutions that work for your individual situation.<br>
+					&#187; You set your goals: we will help you achieve them.<br>
+
+				</div>
+			</div>
+			
+			<div id = "budget" class="fluid intro_paragraph">
+				<h2>Budgeting Matters</h2>
+				<p class="body_text">Profit Calculator is a tool which makes calculations easy and fun. Calculates the profit of the firm based on all
+					 the employees and their salary. 
+				</p>
+				<div id = "revenue" style = "display : none">
+					<h2>Profit Calculator</h2>
+					<p><label>Revenue:</label> <input id = "income" type = "number" value = "1000"></p>
+					<p><label>Fixed Costs:</label> <input id = "costs" type = "number" value = "500"></p>
+					<!-- <p><input id = "incomeSubmitButton" type = "button" value = "Calculate" onClick = "calcRevenue()"></p> -->
+					<div id = "calculatedRevenue"></div>
+				</div>
+				<div id = "graph" style = "display : none">
+					<h2>Revenue Graph</h2>
+					<select id = "chartVertical" onchange="initializeChart()">
+						<option value="income">Income</option>
+						<option value="costs">Costs</option>
+						<option value="profit">Profit</option>
+						<option value="all">All</option>
+					</select>
+					<p><div id = "chartData"></div></p>
+					<canvas id="myCanvas" style="border:1px solid #000000;"></canvas>
+				</div>
+			</div>
+			
+			<div id = "employees" class="fluid intro_paragraph">
+				<div id = "databaseEmployees" style = "display : none">
+				<h2>All Employees</h2>
+				<div id = "Database" style="text-align:center;"></div>
+				<div><input type="checkbox" id="delCheck">Check to avoid delete confirmation</div>
+				</div>
+
+				<div id = "search" style = "display : none">
+				<h2>Search</h2>
+					<p><label>By Name:</label> <input id = "searchInput" onkeyup = "searchEmployee()"></p>
+					<p><div id = "Names"></div></p>
+				</div>
+
+
+				<div id = "addEntry" style = "display : none">
+					<h2>Add Employee</h2>
+					<p><label>First Name:</label> <input id = "first" type = "text"></p>
+					<p><label>Last Name:</label> <input id = "last" type = "text"></p>
+					<p><label>Hours:</label> <input id = "hours" type = "number" value = "0"></p>
+					<p><label>Hourly Pay:</label> <input id = "hourly" type = "number"></p>
+					<p><input type = "button" value = "Add" onClick = "addEmployee()" ></p>
+					<p id = "addResponse"></p>
+				</div>
+			</div>
+			
+			<div id = "contactUs" class="fluid intro_paragraph">
+				<h2>Contact Us</h2>
+				<p><span class="contact_info">D &amp; M<br>
+				1900 Pico Blvd.<br>
+				Santa Monica, CA 90405<br>
+				555-248-0806<br>
+				<a href="mailto:mailbox_@dm_finances.com">Customer Service</a></span> 
+				</p>
+			</div>
+			</div>
+
+			<div id = "footer" class="fluid footer_div">
+			<span class="small_text">Copyright 2002 - 2016<br>Last updated on Aug 18, 2016</span>
+</div>
+</div>
+</body>
+</html>
